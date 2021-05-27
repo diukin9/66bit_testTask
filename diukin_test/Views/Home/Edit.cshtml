@@ -32,9 +32,9 @@
                     </select>
                     <input asp-for="Birthdate" type="text" class="form-control default greyColor"
                            onfocus="(this.type='date')" onblur="if(this.value == '') { this.type = 'text' }"
-                           placeholder="Дата рождения" required><br>
+                           placeholder="Дата рождения" max='@DateTime.Now.ToString("yyyy-MM-dd")' required><br>
                     <button type="submit" class="btn btn-1 btn-1c white-animate with-arrow col-md-12 col-xs-12">
-                        Добавить
+                        Изменить
                     </button>
                 </div>
             </form>

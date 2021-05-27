@@ -32,11 +32,7 @@ namespace diukin_test.Controllers
         public async Task<ActionResult> Index(PlayerViewModel model)
         {
             var splitDate = model.Birthdate.Split("-")
-                .Select(x => int.Parse(x))
-                .ToArray();
-            var date = new DateTime(splitDate[0], splitDate[1], splitDate[2]);
-            if (date.CompareTo(DateTime.Now) > 0)
-                ModelState.AddModelError("", "Такой футболист еще не родился :)");
+                .Select(x => int.Parse(x)).ToArray();
             if (!ModelState.IsValid) return View(model);
             var team = await GetTeam(model.Team);
             await _context.Players.AddAsync(new Player()
@@ -47,7 +43,7 @@ namespace diukin_test.Controllers
                 Team = team,
                 Gender = model.Gender,
                 Nation = model.Nation,
-                Birthdate = date
+                Birthdate = new DateTime(splitDate[0], splitDate[1], splitDate[2])
             });
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -83,11 +79,7 @@ namespace diukin_test.Controllers
         public async Task<IActionResult> Edit(PlayerViewModel model)
         {
             var splitDate = model.Birthdate.Split("-")
-                .Select(x => int.Parse(x))
-                .ToArray();
-            var date = new DateTime(splitDate[0], splitDate[1], splitDate[2]);
-            if (date.CompareTo(DateTime.Now) > 0)
-                ModelState.AddModelError("", "Такой футболист еще не родился :)");
+                .Select(x => int.Parse(x)).ToArray();
             if (!ModelState.IsValid) 
                 return View(model);
             var team = await GetTeam(model.Team);
@@ -101,7 +93,7 @@ namespace diukin_test.Controllers
             player.Team = team;
             player.Gender = model.Gender;
             player.Nation = model.Nation;
-            player.Birthdate = date;
+            player.Birthdate = new DateTime(splitDate[0], splitDate[1], splitDate[2]);
             _context.Players.Update(player);
             await _context.SaveChangesAsync();
             return RedirectToAction("List");

@@ -8,7 +8,7 @@
             футболистов воспользуйтесь кнопкой "Переключиться" в верхней части экрана.
         </p>
         <div class="col-md-12 content no-padding">
-            <form id="contact" asp-action="Index" method="post">
+            <form id="contact" class="padding33" asp-action="Index" method="post">
                 <input asp-for="AllTeams" type="hidden" />
                 <div class="form-group">
                     <input asp-for="Name" id="name" class="form-control default" placeholder="Имя" autocomplete="off"
@@ -38,7 +38,7 @@
                     </select>
                     <input asp-for="Birthdate" id="birthdate" type="text" class="form-control default greyColor"
                            onfocus="(this.type='date')" onblur="if(this.value == '') { this.type = 'text' }"
-                           placeholder="Дата рождения" required><br>
+                           placeholder="Дата рождения" max='@DateTime.Now.ToString("yyyy-MM-dd")' required><br>
                     <button id="sendButton" class="btn btn-1 col-md-12 col-xs-12">
                         Добавить
                     </button>
@@ -49,5 +49,4 @@
 </div>
 
 <script src="~/js/signalr.min.js"></script>
-<script src="~/js/adaptive.js"></script>
 <script src="~/js/input_signalR.js"></script>
