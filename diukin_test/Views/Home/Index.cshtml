@@ -1,0 +1,51 @@
+﻿@model diukin_test.ViewModels.PlayerViewModel
+
+<div class="center_block">
+    <div class="col-md-12 content nopadding">
+        <h1 class="randomText" id="randomText" style="margin-top: 5rem;">Каталог футболистов 3.0</h1>
+        <p>
+            На данной странице вы можете пополнить каталог футболистов, заполнив форму ниже.<br>
+            Для просмотра списка футболистов воспользуйтесь кнопкой "Переключиться" в верхней части экрана.
+        </p>
+        <div class="col-md-12 content no-padding">
+            <form id="contact" asp-action="Index" method="post">
+                <input asp-for="AllTeams" type="hidden" />
+                <div class="form-group">
+                    <input asp-for="Name" id="name" class="form-control default" placeholder="Имя" autocomplete="off" required>
+                    <input asp-for="Surname" id="surname" class="form-control default" placeholder="Фамилия" autocomplete="off"
+                           required>
+                    <select asp-for="Gender" id="gender" style="color:#999999;" class="form-control default" required>
+                        <option style="color: black;" value="@Gender.Мужской" selected>Пол: мужской</option>
+                        <option style="color: black;" value="@Gender.Женский">Пол: женский</option>
+                    </select>
+                    <input type="text" asp-for="Team" class="form-control default" list="_team" placeholder="Название команды"
+                           autocomplete="off" required>
+                    <datalist id="_team">
+                        @if (Model.AllTeams != null)
+                        {
+                            foreach (var team in Model.AllTeams)
+                            {
+                                <option>@team</option>
+                            }
+                        }
+                    </datalist>
+                    <select asp-for="Nation" id="nation" style="color:#999999;" class="form-control default" required>
+                        @foreach (var nation in new string[] { "Россия", "США", "Италия" })
+                        {
+                            <option style="color: black;" value="@nation" selected>Страна: @nation</option>
+                        }
+                    </select>
+                    <input asp-for="Birthdate" id="birthdate" style="color:#999999;" type="text" class="form-control default"
+                           onfocus="(this.type='date')" onblur="if(this.value == '') { this.type = 'text' }"
+                           placeholder="Дата рождения" required><br>
+                    <button type="submit" class="btn btn-1 btn-1c white-animate with-arrow col-md-12 col-xs-12">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/js/adaptive.js"></script>

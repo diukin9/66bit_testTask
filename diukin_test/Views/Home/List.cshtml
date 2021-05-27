@@ -1,0 +1,44 @@
+﻿@model List<diukin_test.Models.Player>
+
+<div class="center_block" style="padding: 5% 12%">
+    <div class="col-md-12 content nopadding">
+        <div class="col-md-12 content no-padding">
+            <table class="table" style="color: rgba(255, 255, 255, 0.5);">
+                <tr style="font-size: 16px;color:white;" id="messagesList">
+                    @foreach (var item in "Имя.Фамилия.Пол.Команда.Страна.Дата рождения.Действие".Split("."))
+                    {
+                        <th width="14%" style="text-align: center; border-top: none; border-bottom: 1px solid red">
+                            @item
+                        </th>
+                    }
+                </tr>
+                @foreach (var player in Model)
+                {
+                    <tr>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            @player.Name
+                        </td>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            @player.Surname
+                        </td>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            @player.Gender
+                        </td>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            @player.Team.Name
+                        </td>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            @player.Nation
+                        </td>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            @player.Birthdate.ToString("dd.MM.yyyy")
+                        </td>
+                        <td style="text-align: center;border-color: rgba(255, 255, 255, 0.05);">
+                            <a asp-route-id="@player.Id" asp-action="Edit" class="edit">Редактировать</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
