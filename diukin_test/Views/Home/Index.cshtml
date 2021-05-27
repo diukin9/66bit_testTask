@@ -2,24 +2,25 @@
 
 <div class="center_block">
     <div class="col-md-12 content nopadding">
-        <h1 class="randomText" id="randomText" style="margin-top: 5rem;">Каталог футболистов 3.0</h1>
+        <h1 class="randomText margin-top-5-rem" id="randomText">Каталог футболистов 3.0</h1>
         <p>
-            На данной странице вы можете пополнить каталог футболистов, заполнив форму ниже.<br>
-            Для просмотра списка футболистов воспользуйтесь кнопкой "Переключиться" в верхней части экрана.
+            На данной странице вы можете пополнить каталог футболистов, заполнив форму ниже.<br>Для просмотра списка
+            футболистов воспользуйтесь кнопкой "Переключиться" в верхней части экрана.
         </p>
         <div class="col-md-12 content no-padding">
             <form id="contact" asp-action="Index" method="post">
                 <input asp-for="AllTeams" type="hidden" />
                 <div class="form-group">
-                    <input asp-for="Name" id="name" class="form-control default" placeholder="Имя" autocomplete="off" required>
-                    <input asp-for="Surname" id="surname" class="form-control default" placeholder="Фамилия" autocomplete="off"
+                    <input asp-for="Name" id="name" class="form-control default" placeholder="Имя" autocomplete="off"
                            required>
-                    <select asp-for="Gender" id="gender" style="color:#999999;" class="form-control default" required>
-                        <option style="color: black;" value="@Gender.Мужской" selected>Пол: мужской</option>
-                        <option style="color: black;" value="@Gender.Женский">Пол: женский</option>
-                    </select>
-                    <input type="text" asp-for="Team" id="team" class="form-control default" list="_team" placeholder="Название команды"
+                    <input asp-for="Surname" id="surname" class="form-control default" placeholder="Фамилия"
                            autocomplete="off" required>
+                    <select asp-for="Gender" id="gender" class="greyColor form-control default" required>
+                        <option class="blackColor" value="@Gender.Male" selected>Пол: мужской</option>
+                        <option class="blackColor" value="@Gender.Female">Пол: женский</option>
+                    </select>
+                    <input type="text" asp-for="Team" id="team" class="form-control default" list="_team"
+                           placeholder="Название команды" autocomplete="off" required>
                     <datalist id="_team">
                         @if (Model.AllTeams != null)
                         {
@@ -29,23 +30,22 @@
                             }
                         }
                     </datalist>
-                    <select asp-for="Nation" id="nation" style="color:#999999;" class="form-control default" required>
+                    <select asp-for="Nation" id="nation" class="form-control default greyColor" required>
                         @foreach (var nation in new string[] { "Россия", "США", "Италия" })
                         {
-                            <option style="color: black;" value="@nation" selected>Страна: @nation</option>
+                            <option class="blackColor" value="@nation" selected>Страна: @nation</option>
                         }
                     </select>
-                    <input asp-for="Birthdate" id="birthdate" style="color:#999999;" type="text" class="form-control default"
+                    <input asp-for="Birthdate" id="birthdate" type="text" class="form-control default greyColor"
                            onfocus="(this.type='date')" onblur="if(this.value == '') { this.type = 'text' }"
                            placeholder="Дата рождения" required><br>
-                    <button id="sendButton" class="btn btn-1 btn-1c white-animate with-arrow col-md-12 col-xs-12">
+                    <button id="sendButton" class="btn btn-1 col-md-12 col-xs-12">
                         Добавить
                     </button>
                 </div>
             </form>
         </div>
     </div>
-
 </div>
 
 <script src="~/js/signalr.min.js"></script>

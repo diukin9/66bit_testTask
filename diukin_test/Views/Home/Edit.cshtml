@@ -1,19 +1,20 @@
 ﻿@model diukin_test.ViewModels.PlayerViewModel
 
-<div class="center_block" style="margin-top:5%;">
+<div class="center_block margin-top-5">
     <div class="col-md-12 nopadding">
         <div class="col-md-12 content no-padding">
             <form id="contact" asp-action="Edit" method="post">
                 <input asp-for="Id" type="hidden" />
                 <input asp-for="AllTeams" type="hidden" />
                 <div class="form-group">
-                    <input asp-for="Name" class="form-control default" autocomplete="off" required>
-                    <input asp-for="Surname" class="form-control default" autocomplete="off" required>
-                    <select asp-for="Gender" style="color:#999999;" class="form-control default" required>
-                        <option style="color: black;" value="@Gender.Мужской" selected>Пол: мужской</option>
-                        <option style="color: black;" value="@Gender.Женский">Пол: женский</option>
+                    <input asp-for="Name" class="form-control default greyColor" autocomplete="off" required>
+                    <input asp-for="Surname" class="form-control default greyColor" autocomplete="off" required>
+                    <select asp-for="Gender" class="form-control default greyColor" required>
+                        <option class="blackColor" value="@Gender.Male" selected>Пол: мужской</option>
+                        <option class="blackColor" value="@Gender.Female">Пол: женский</option>
                     </select>
-                    <input asp-for="Team" class="form-control default" list="team" autocomplete="off" required>
+                    <input asp-for="Team" class="form-control default greyColor" list="team" autocomplete="off"
+                           required>
                     <datalist id="team">
                         @if (Model.AllTeams != null)
                         {
@@ -23,13 +24,13 @@
                             }
                         }
                     </datalist>
-                    <select asp-for="Nation" style="color:#999999;" class="form-control default" required>
-                        @foreach (var nation in new string[] { "Россия", "США", "Италия" })
+                    <select asp-for="Nation" class="form-control default greyColor" required>
+                        @foreach (var nation in new string[] { "Италия", "США", "Россия" })
                         {
-                            <option style="color: black;" value="@nation">Страна: @nation</option>
+                            <option class="blackColor" value="@nation">Страна: @nation</option>
                         }
                     </select>
-                    <input asp-for="Birthdate" style="color:#999999;" type="text" class="form-control default"
+                    <input asp-for="Birthdate" type="text" class="form-control default greyColor"
                            onfocus="(this.type='date')" onblur="if(this.value == '') { this.type = 'text' }"
                            placeholder="Дата рождения" required><br>
                     <button type="submit" class="btn btn-1 btn-1c white-animate with-arrow col-md-12 col-xs-12">

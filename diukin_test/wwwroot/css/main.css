@@ -730,20 +730,45 @@ body {
     margin-bottom: 50px;
 }
 
-/* Overlay closing cross */
+.greyColor {
+    color: #999999 !important;
+}
 
-/* Effects */
+.blackColor {
+    color: black !important;
+}
 
-/* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
+.margin-top-5 {
+    margin-top: 5% !important;
+}
 
-/* Use this next selector to style things like font-size and line-height: */
+.margin-top-5-rem {
+    margin-top: 5rem !important;
+}
 
-/* This next selector defines the color of the border on the outside of the arrow. This will automatically match the color and size of the border set on the main tooltip styles. Set display: none; if you would like a border around the tooltip but no border around the arrow */
+.paddint-5-12 {
+    padding: 5% 12% !important;
+}
 
-/* If you're using the icon option, use this next selector to style them */
+.td-set {
+    text-align: center !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    border-width: 1px !important;  
+}
 
-/* This is the base styling required to make all Tooltipsters work */
+.gray-transparent {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
 
-/* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
+.r-border {
+    text-align: center !important;
+    border-top: none !important;
+    border-bottom: 1px solid red !important;
+    width: 14%;
+}
 
-/* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
+.font-set {
+    font-size: 16px;
+    color: white;
+}
+

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.SignalR;
-using System.Linq;
+﻿using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
 namespace diukin_test.Hubs
@@ -13,7 +10,8 @@ namespace diukin_test.Hubs
         {
             var date = birthdate.Split("-");
             birthdate = $"{date[2]}.{date[1]}.{date[0]}";
-            await Clients.All.SendAsync("putToList", name, surname, gender, team, nation, birthdate);
+            await Clients.All.SendAsync("putToList", name, surname, 
+                gender, team, nation, birthdate);
         }
     }
 }

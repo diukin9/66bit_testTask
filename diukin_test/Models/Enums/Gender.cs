@@ -1,8 +1,12 @@
-﻿namespace diukin_test.Models
+﻿using System.ComponentModel;
+
+namespace diukin_test.Models
 {
     public enum Gender
     {
-        Мужской,
-        Женский
+        [Description("Мужской")]
+        Male,
+        [Description("Женский")]
+        Female
     }
 }

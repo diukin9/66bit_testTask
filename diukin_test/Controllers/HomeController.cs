@@ -19,18 +19,24 @@ namespace diukin_test.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> Index() => View(new PlayerViewModel() 
-        { 
-            AllTeams = await _context.Teams.Select(x => x.Name).ToListAsync() 
-        });
+        public async Task<ActionResult> Index() 
+        {
+            return View(new PlayerViewModel()
+            {
+                AllTeams = await _context.Teams.Select(x => x.Name).ToListAsync()
+            });
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Index(PlayerViewModel model)
         {
-            var date = model.Birthdate.Split("-")
-                .Select(x => int.Parse(x)).ToArray();
-            IsValid(date, model.Name, model.Surname, model.Team);
+            var splitDate = model.Birthdate.Split("-")
+                .Select(x => int.Parse(x))
+                .ToArray();
+            var date = new DateTime(splitDate[0], splitDate[1], splitDate[2]);
+            if (date.CompareTo(DateTime.Now) > 0)
+                ModelState.AddModelError("", "Такой футболист еще не родился :)");
             if (!ModelState.IsValid) return View(model);
             var team = await GetTeam(model.Team);
             await _context.Players.AddAsync(new Player()
@@ -41,7 +47,7 @@ namespace diukin_test.Controllers
                 Team = team,
                 Gender = model.Gender,
                 Nation = model.Nation,
-                Birthdate = new DateTime(date[0], date[1], date[2])
+                Birthdate = date
             });
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -57,7 +63,8 @@ namespace diukin_test.Controllers
             var player = await _context.Players.Include(x => x.Team)
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
-            if (player == null) return RedirectToAction("List");
+            if (player == null) 
+                return RedirectToAction("List");
             return View(new PlayerViewModel()
             {
                 Id = id,
@@ -75,20 +82,26 @@ namespace diukin_test.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(PlayerViewModel model)
         {
-            var date = model.Birthdate.Split("-")
-                .Select(x => int.Parse(x)).ToArray();
-            IsValid(date, model.Name, model.Surname, model.Team);
-            if (!ModelState.IsValid) return View(model);
+            var splitDate = model.Birthdate.Split("-")
+                .Select(x => int.Parse(x))
+                .ToArray();
+            var date = new DateTime(splitDate[0], splitDate[1], splitDate[2]);
+            if (date.CompareTo(DateTime.Now) > 0)
+                ModelState.AddModelError("", "Такой футболист еще не родился :)");
+            if (!ModelState.IsValid) 
+                return View(model);
             var team = await GetTeam(model.Team);
             var player = await _context.Players.Include(x => x.Team)
-                .Where(x => x.Id == model.Id).FirstOrDefaultAsync();
-            if (player == null) return RedirectToAction("List");
+                .Where(x => x.Id == model.Id)
+                .FirstOrDefaultAsync();
+            if (player == null) 
+                return RedirectToAction("List");
             player.Name = model.Name;
             player.Surname = model.Surname;
             player.Team = team;
             player.Gender = model.Gender;
             player.Nation = model.Nation;
-            player.Birthdate = new DateTime(date[0], date[1], date[2]);
+            player.Birthdate = date;
             _context.Players.Update(player);
             await _context.SaveChangesAsync();
             return RedirectToAction("List");
@@ -111,24 +124,6 @@ namespace diukin_test.Controllers
                 await _context.SaveChangesAsync();
             }
             return team;
-        }
-
-        [NonAction]
-        private void IsValid(int[] birthdate, params string[] strings)
-        {
-            foreach (var item in strings)
-            {
-                if (item.Length < 1)
-                {
-                    ModelState.AddModelError(string.Empty, 
-                        "Необходимо заполнить все поля!");
-                    break;
-                }
-            }
-            var date = new DateTime(birthdate[0], birthdate[1], birthdate[2]);
-            if (date.CompareTo(DateTime.Now) > 0)
-                ModelState.AddModelError(string.Empty, 
-                    "Такой футболист еще не родился :)");
         }
     }
 }
