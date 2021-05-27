@@ -10,6 +10,7 @@ namespace diukin_test.Hubs
         {
             var date = birthdate.Split("-");
             birthdate = $"{date[2]}.{date[1]}.{date[0]}";
+            gender = gender == "Male" ? "Мужской" : "Женский";
             await Clients.All.SendAsync("putToList", name, surname, 
                 gender, team, nation, birthdate);
         }

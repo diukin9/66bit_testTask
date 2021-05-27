@@ -27,7 +27,7 @@
                     <select asp-for="Nation" class="form-control default greyColor" required>
                         @foreach (var nation in new string[] { "Италия", "США", "Россия" })
                         {
-                            <option class="blackColor" value="@nation">Страна: @nation</option>
+                            <option class="blackColor" value="@nation">Национальность: @nation</option>
                         }
                     </select>
                     <input asp-for="Birthdate" type="text" class="form-control default greyColor"

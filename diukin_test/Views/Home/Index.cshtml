@@ -1,4 +1,7 @@
 ﻿@model diukin_test.ViewModels.PlayerViewModel
+@{ 
+    ViewData["Title"] = "Каталог футболистов 3.0";
+}
 
 <div class="center_block">
     <div class="col-md-12 content nopadding">
@@ -33,7 +36,7 @@
                     <select asp-for="Nation" id="nation" class="form-control default greyColor" required>
                         @foreach (var nation in new string[] { "Россия", "США", "Италия" })
                         {
-                            <option class="blackColor" value="@nation" selected>Страна: @nation</option>
+                            <option class="blackColor" value="@nation" selected>Национальность: @nation</option>
                         }
                     </select>
                     <input asp-for="Birthdate" id="birthdate" type="text" class="form-control default greyColor"
