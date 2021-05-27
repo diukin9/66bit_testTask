@@ -18,7 +18,7 @@
                         <option style="color: black;" value="@Gender.Мужской" selected>Пол: мужской</option>
                         <option style="color: black;" value="@Gender.Женский">Пол: женский</option>
                     </select>
-                    <input type="text" asp-for="Team" class="form-control default" list="_team" placeholder="Название команды"
+                    <input type="text" asp-for="Team" id="team" class="form-control default" list="_team" placeholder="Название команды"
                            autocomplete="off" required>
                     <datalist id="_team">
                         @if (Model.AllTeams != null)
@@ -38,9 +38,10 @@
                     <input asp-for="Birthdate" id="birthdate" style="color:#999999;" type="text" class="form-control default"
                            onfocus="(this.type='date')" onblur="if(this.value == '') { this.type = 'text' }"
                            placeholder="Дата рождения" required><br>
-                    <button type="submit" class="btn btn-1 btn-1c white-animate with-arrow col-md-12 col-xs-12">
+                    <button id="sendButton" class="btn btn-1 btn-1c white-animate with-arrow col-md-12 col-xs-12">
                         Добавить
                     </button>
+                    <a id="sendButto">here</a>
                 </div>
             </form>
         </div>
@@ -48,4 +49,6 @@
 
 </div>
 
+<script src="~/js/signalr.min.js"></script>
 <script src="~/js/adaptive.js"></script>
+<script src="~/js/input_signalR.js"></script>

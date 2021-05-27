@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5TcZCUrrXL+jy7PR24TeD4ZlY52nw3x8uHtUwMM4QSuCTJ4cCwQCC8fgau9nemVB+MY5Uk6wk/cI7XOyunxYFw==",
+  "dgSpecHash": "5SkFvQywvDd8ydlshr4WLEXd29e8OKj88atVBdaG2C5ik7U8DUtmQ2uZNb64R4S7lC5bGTupGXyPY5tjP3SbNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\petrd\\Desktop\\diukin_test\\diukin_test\\diukin_test.csproj",
+  "projectFilePath": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\diukin_test\\diukin_test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petrd\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\petrd\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
