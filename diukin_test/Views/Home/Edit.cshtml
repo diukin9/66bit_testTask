@@ -4,7 +4,7 @@
     <div class="col-md-12 nopadding">
         <div class="col-md-12 content no-padding">
             <form id="contact" asp-action="Edit" method="post">
-                <input asp-for="Id" />
+                <input asp-for="Id" type="hidden" />
                 <input asp-for="AllTeams" type="hidden" />
                 <div class="form-group">
                     <input asp-for="Name" class="form-control default" autocomplete="off" required>
