@@ -1,8 +1,11 @@
 ﻿@model List<diukin_test.Models.Player>
 
-<div class="center_block paddint-5-12">
+<div class="center_block">
     <div class="col-md-12 content nopadding">
-        <div class="col-md-12 content no-padding">
+        <div id="modDialog" class="modal fade">
+            <div id="dialogContent" class="modal-dialog"></div>
+        </div>
+        <div class="col-md-12 content no-padding paddint-3-12">
             <table class="table gray-transparent">
                 <tbody id="PlayersTable">
                     <tr class="font-set">
@@ -14,7 +17,7 @@
                         <th class="r-border">Дата рождения</th>
                         <th class="r-border">Действие</th>
                     </tr>
-                   @foreach (var player in Model)
+                    @foreach (var player in Model)
                     {
                         <tr>
                             <td class="td-set">@player.Name</td>
@@ -26,7 +29,7 @@
                             <td class="td-set">@player.Nation</td>
                             <td class="td-set">@player.Birthdate.ToString("dd.MM.yyyy")</td>
                             <td class="td-set">
-                                <a asp-route-id="@player.Id" asp-action="Edit">Редактировать</a>
+                                <a asp-route-id="@player.Id" asp-action="Edit" class="compItem">Редактировать</a>
                             </td>
                         </tr>
                     }
@@ -35,6 +38,22 @@
         </div>
     </div>
 </div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $(".compItem").click(function (e) {
+                e.preventDefault();
+                $.get(this.href, function (data) {
+                    $('#dialogContent').html(data);
+                    $('#modDialog').modal('show');
+                });
+            });
+        })
+    </script>
+}
 
 <script src="~/js/signalr.min.js"></script>
 <script src="~/js/listen_signalR.js"></script>

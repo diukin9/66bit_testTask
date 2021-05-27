@@ -65,7 +65,7 @@ namespace diukin_test.Controllers
                 .FirstOrDefaultAsync();
             if (player == null) 
                 return RedirectToAction("List");
-            return View(new PlayerViewModel()
+            return PartialView(new PlayerViewModel()
             {
                 Id = id,
                 Name = player.Name,
