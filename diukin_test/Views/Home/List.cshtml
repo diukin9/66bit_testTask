@@ -6,57 +6,42 @@
 <div class="center_block">
     <div class="col-md-12 content nopadding">
         <div class="col-md-12 content no-padding paddint-5-12">
+            <div id="modDialog" class="modal fade">
+                <div id="dialogContent" class="modal-dialog"></div>
+            </div>
             <table class="table gray-transparent">
                 <tbody id="PlayersTable">
                     <tr class="font-set">
-                        <th class="r-border">Имя</th>
-                        <th class="r-border">Фамилия</th>
-                        <th class="r-border">Пол</th>
-                        <th class="r-border">Команда</th>
-                        <th class="r-border">Национальность</th>
-                        <th class="r-border">Дата рождения</th>
-                        <th class="r-border">Действие</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Пол</th>
+                        <th>Команда</th>
+                        <th>Национальность</th>
+                        <th>Дата рождения</th>
+                        <th>Действие</th>
                     </tr>
                     @foreach (var player in Model)
                     {
-                        <tr>
-                            <td class="td-set">@player.Name</td>
-                            <td class="td-set">@player.Surname</td>
-                            <td class="td-set">
+                        <tr class="tr-set">
+                            <td>@player.Name</td>
+                            <td>@player.Surname</td>
+                            <td>
                                 @(player.Gender.ToString() == "Male" ? "Мужской" : "Женский")
                             </td>
-                            <td class="td-set">@player.Team.Name</td>
-                            <td class="td-set">@player.Nation</td>
-                            <td class="td-set">@player.Birthdate.ToString("dd.MM.yyyy")</td>
-                            <td class="td-set">
-                                <a asp-route-id="@player.Id" asp-action="Edit" class="compItem">Редактировать</a>
+                            <td>@player.Team.Name</td>
+                            <td>@player.Nation</td>
+                            <td>@player.Birthdate.ToString("dd.MM.yyyy")</td>
+                            <td>
+                                <a asp-route-id="@player.Id" asp-action="Edit" class="showModal">Редактировать</a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
-        <div id="modDialog" class="modal fade">
-            <div id="dialogContent" class="modal-dialog"></div>
-        </div>
     </div>
 </div>
 
-@section scripts
-{
-    <script type="text/javascript">
-        $(function () {
-            $.ajaxSetup({ cache: false });
-            $(".compItem").click(function (e) {
-                e.preventDefault();
-                $.get(this.href, function (data) {
-                    $('#dialogContent').html(data);
-                    $('#modDialog').modal('show');
-                });
-            });
-        })
-    </script>
-}
-
+@section scripts { <script src="~/js/modal.js"></script> }
 <script src="~/js/signalr.min.js"></script>
-<script src="~/js/listen_signalR.js"></script>
+<script src="~/js/print_signalR.js"></script>

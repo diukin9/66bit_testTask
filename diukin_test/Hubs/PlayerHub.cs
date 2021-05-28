@@ -5,7 +5,7 @@ namespace diukin_test.Hubs
 {
     public class PlayerHub : Hub
     {
-        public async Task sendToList(string name, string surname,
+        public async Task SendToList(string name, string surname,
             string gender, string team, string nation, string birthdate)
         {
             var date = birthdate.Split("-");

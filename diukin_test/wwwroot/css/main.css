@@ -324,36 +324,6 @@ th {
     width: device-width;
 }
 
-/**
- * ==========================
- * Animations
- */
-
-/**
- * ==========================
- * JS animation styles
- */
-
-/**
- * ==========================
- * CSS animation styles
- */
-
-/**
- * ==========================
- * Arrows
- *
- */
-
-/**
- * ==========================
- * For demo purposes only
- */
-
-/* ========== Cube Loader ========== */
-/******************* PRELOADER 6 **********
-*******************************************/
-/* button reset */
 .btn {
     border: 1px solid #fff;
     margin: 0 auto;
@@ -404,24 +374,6 @@ th {
 }
 
 /* Button 1c */
-.btn-1c:after {
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
-}
-
-.btn-1c:hover,
-.btn-1c:active {
-    color: #121214;
-}
-
-    .btn-1c:hover:after,
-    .btn-1c:active:after {
-        width: 100%;
-        background: #fff;
-    }
 
 .btn:before {
     font-variant: normal;
@@ -660,8 +612,6 @@ body {
     position: absolute;
 }
 
-/* logo */
-
 .mobile-view {
     display: block;
 }
@@ -672,10 +622,6 @@ body {
     }
 }
 
-/* Content styles */
-
-/* Just me Effect */
-
 #contact input[type=text] {
     width: 100%;
     border: 0;
@@ -684,20 +630,6 @@ body {
     outline: none;
     background: none;
     height: 45px;
-    padding-top: 30px;
-    font-family: "Playfair Display";
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: 2px;
-}
-
-#contact .form-control.default {
-    background: none;
-    border: 0;
-    border-bottom: 1px solid #48464a;
-    border-radius: 0;
-    outline: none;
-    height: 60px;
     padding-top: 30px;
     font-family: "Playfair Display";
     font-weight: 400;
@@ -730,10 +662,6 @@ body {
     margin-bottom: 50px;
 }
 
-.greyColor {
-    color: #999999 !important;
-}
-
 .blackColor {
     color: black !important;
 }
@@ -750,17 +678,17 @@ body {
     padding: 5% 12% 0 12% !important;
 }
 
-.td-set {
+.tr-set td {
     text-align: center !important;
     border-color: rgba(255, 255, 255, 0.05) !important;
-    border-width: 1px !important;  
+    border-width: 1px !important;
 }
 
 .gray-transparent {
     color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.r-border {
+.font-set th {
     text-align: center !important;
     border-top: none !important;
     border-bottom: 1px solid red !important;
@@ -778,4 +706,25 @@ body {
 
 .padding33 {
     padding: 0 33% !important;
+}
+
+option {
+    color: black !important;
+}
+
+input, select {
+    color: #999999 !important;
+}
+
+.form-group .form-control {
+    background: none !important;
+    border: 0 !important;
+    border-bottom: 1px solid #48464a !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    height: 60px !important;
+    padding-top: 30px !important;
+    font-family: "Playfair Display" !important;
+    font-weight: 400 !important;
+    letter-spacing: 2px !important;
 }
