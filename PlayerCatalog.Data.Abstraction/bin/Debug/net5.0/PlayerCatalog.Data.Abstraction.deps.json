@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PlayerCatalog.Data.Abstraction/1.0.0": {
+        "dependencies": {
+          "PlayerCatalog.Data.Models": "1.0.0"
+        },
+        "runtime": {
+          "PlayerCatalog.Data.Abstraction.dll": {}
+        }
+      },
+      "PlayerCatalog.Data.Models/1.0.0": {
+        "runtime": {
+          "PlayerCatalog.Data.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PlayerCatalog.Data.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PlayerCatalog.Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Каталог футболистов 3.0";
+}
+
+<div class="center_block"  style="margin-top:15%">
+    <div class="col-md-12 content nopadding">
+        <div class="col-md-12 padding33">
+            <form method="get" asp-controller="Player" asp-action="AddPlayer">
+                <button class="btn btn-1 col-md-12 col-xs-12" style="margin-bottom:7%">
+                    Добавить футболиста
+                </button>
+            </form>
+            <form method="get" asp-controller="Player" asp-action="PlayerList">
+                <button class="btn btn-1 col-md-12 col-xs-12">
+                    Список футболистов
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

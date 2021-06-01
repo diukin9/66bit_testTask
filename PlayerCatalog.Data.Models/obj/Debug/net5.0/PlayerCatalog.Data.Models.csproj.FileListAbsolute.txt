@@ -1,0 +1,12 @@
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\bin\Debug\net5.0\PlayerCatalog.Data.Models.deps.json
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\bin\Debug\net5.0\PlayerCatalog.Data.Models.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\bin\Debug\net5.0\ref\PlayerCatalog.Data.Models.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\bin\Debug\net5.0\PlayerCatalog.Data.Models.pdb
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.csprojAssemblyReference.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.AssemblyInfoInputs.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.AssemblyInfo.cs
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\ref\PlayerCatalog.Data.Models.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Models\obj\Debug\net5.0\PlayerCatalog.Data.Models.pdb

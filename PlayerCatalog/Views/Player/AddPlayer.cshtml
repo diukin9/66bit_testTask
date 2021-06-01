@@ -1,0 +1,43 @@
+﻿@model PlayerCatalog.ViewModels.PlayerViewModel
+@{
+    ViewData["Title"] = "Каталог футболистов 3.0";
+}
+
+<div class="center_block">
+    <div class="col-md-12 content nopadding">
+        <h1 class="randomText margin-top-5-rem">Каталог футболистов 3.0</h1>
+        <p>
+            На данной странице вы можете пополнить каталог футболистов, заполнив форму ниже.<br>Для просмотра списка
+            футболистов воспользуйтесь кнопкой "Переключиться" в верхней части экрана.
+        </p>
+        <div class="col-md-12 content no-padding">
+            <form id="contact" class="padding33" asp-controller="Player" asp-action="AddPlayer" method="post">
+                <input asp-for="AllTeams" type="hidden" />
+                <div class="form-group">
+                    <input asp-for="Name" id="name" class="form-control" placeholder="Имя" autocomplete="off" required>
+                    <input asp-for="Surname" id="surname" class="form-control" placeholder="Фамилия" autocomplete="off"
+                           required>
+                    <select asp-for="Gender" id="gender" class="form-control" required>
+                        <option value="0" selected>Пол: мужской</option>
+                        <option value="1">Пол: женский</option>
+                    </select>
+                    <input type="text" asp-for="Team" id="team" class="form-control" list="_team"
+                           placeholder="Название команды" autocomplete="off" required>
+                    <datalist id="_team">
+                        @foreach (var team in Model.AllTeams) { <option value="@team.Name"/> }
+                    </datalist>
+                    <select asp-for="Nation" id="nation" class="form-control" required>
+                        <option class="blackColor" value="0" selected>Национальность: Россия</option>
+                        <option class="blackColor" value="1">Национальность: США</option>
+                        <option class="blackColor" value="2">Национальность: Италия</option>
+                    </select>
+                    <input asp-for="Birthdate" id="birthdate" type="text" class="form-control" value="Дата рождения" 
+                        onfocus="typeData();" /><br />
+                    <button class="btn btn-1 col-md-12 col-xs-12">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/dateInput.js"></script>

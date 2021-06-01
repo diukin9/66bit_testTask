@@ -1,0 +1,15 @@
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\bin\Debug\net5.0\PlayerCatalog.Data.Abstraction.deps.json
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\bin\Debug\net5.0\PlayerCatalog.Data.Abstraction.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\bin\Debug\net5.0\ref\PlayerCatalog.Data.Abstraction.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\bin\Debug\net5.0\PlayerCatalog.Data.Abstraction.pdb
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\bin\Debug\net5.0\PlayerCatalog.Data.Models.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\bin\Debug\net5.0\PlayerCatalog.Data.Models.pdb
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.csprojAssemblyReference.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.AssemblyInfoInputs.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.AssemblyInfo.cs
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.csproj.CoreCompileInputs.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.csproj.CopyComplete
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\ref\PlayerCatalog.Data.Abstraction.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Data.Abstraction\obj\Debug\net5.0\PlayerCatalog.Data.Abstraction.pdb

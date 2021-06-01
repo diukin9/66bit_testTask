@@ -1,0 +1,32 @@
+﻿@model PlayerCatalog.ViewModels.PlayerViewModel
+
+<div class="center_block margin-top-5">
+    <div class="col-md-12 nopadding">
+        <div class="col-md-12 content padding33">
+            <form id="contact" asp-controller="Player" asp-action="EditPlayer" method="post">
+                <input asp-for="Id" type="hidden" />
+                <input asp-for="AllTeams" type="hidden" />
+                <div class="form-group">
+                    <input asp-for="Name" class="form-control" autocomplete="off" required>
+                    <input asp-for="Surname" class="form-control" autocomplete="off" required>
+                    <select asp-for="Gender" class="form-control" required>
+                        <option value="0" selected>Пол: мужской</option>
+                        <option value="1">Пол: женский</option>
+                    </select>
+                    <input asp-for="Team" class="form-control" list="team" autocomplete="off" required>
+                    <datalist id="team">
+                        @foreach (var team in Model.AllTeams) { <option>@team.Name</option> }
+                    </datalist>
+                    <select asp-for="Nation" class="form-control" required>
+                        <option value="0">Национальность: Россия</option>
+                        <option value="1">Национальность: США</option>
+                        <option value="2">Национальность: Италия</option>
+                    </select>
+                    <input asp-for="Birthdate" type="date" class="form-control"
+                           max='@DateTime.Now.ToString("yyyy-MM-dd")' required><br>
+                    <button type="submit" class="btn btn-1 col-md-12 col-xs-12">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

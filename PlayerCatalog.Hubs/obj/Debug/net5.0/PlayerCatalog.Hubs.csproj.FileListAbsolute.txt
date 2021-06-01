@@ -1,0 +1,15 @@
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\bin\Debug\net5.0\PlayerCatalog.Hubs.deps.json
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\bin\Debug\net5.0\PlayerCatalog.Hubs.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\bin\Debug\net5.0\ref\PlayerCatalog.Hubs.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\bin\Debug\net5.0\PlayerCatalog.Hubs.pdb
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\bin\Debug\net5.0\PlayerCatalog.Data.Models.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\bin\Debug\net5.0\PlayerCatalog.Data.Models.pdb
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.csprojAssemblyReference.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.AssemblyInfoInputs.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.AssemblyInfo.cs
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.csproj.CoreCompileInputs.cache
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.csproj.CopyComplete
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\ref\PlayerCatalog.Hubs.dll
+C:\Users\petrd\source\repos\PlayerCatalog\PlayerCatalog.Hubs\obj\Debug\net5.0\PlayerCatalog.Hubs.pdb
