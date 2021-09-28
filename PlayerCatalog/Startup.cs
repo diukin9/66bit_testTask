@@ -22,9 +22,8 @@ namespace PlayerCatalog
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DataContext>(x => x.UseNpgsql(connectionString));
-            services.AddScoped<PlayerRepository>();
-            services.AddScoped<TeamRepository>();
-            services.AddScoped<SendFromHub>();
+            RegisterServices(services);
+            services.AddAutoMapper(typeof(MappingProfiles.MappingProfiles));
             services.AddControllersWithViews();
             services.AddSignalR();
         }
@@ -32,7 +31,9 @@ namespace PlayerCatalog
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
+            }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -49,6 +50,13 @@ namespace PlayerCatalog
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapHub<PlayerHub>("/PlayerHub");
             });
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            services.AddScoped<PlayerRepository>();
+            services.AddScoped<TeamRepository>();
+            services.AddScoped<SendFromHub>();
         }
     }
 }

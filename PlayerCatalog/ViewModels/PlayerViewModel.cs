@@ -26,23 +26,5 @@ namespace PlayerCatalog.ViewModels
         public Nation Nation { get; set; }
         [Required]
         public DateTime Birthdate { get; set; }
-
-        public PlayerViewModel()
-        {
-
-        }
-
-        public PlayerViewModel(int id, string name, string surname, Gender gender, 
-            string team, Nation nation, DateTime birthdate, List<Team> allTeams)
-        {
-            this.Id = id;
-            this.Name = name;
-            this.Team = team;
-            this.Gender = gender;
-            this.Nation = nation;
-            this.Surname = surname;
-            this.AllTeams = allTeams;
-            this.Birthdate = birthdate;
-        }
     }
 }

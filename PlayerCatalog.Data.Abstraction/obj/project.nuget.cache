@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LxCQ7kmayf+sAwXFr1gEIa932C83zvsVdVhV58xy+qJrXQ3S934XUoU/YMglJIfCpEfGW1FYb5HBxse/V8a+Ew==",
+  "dgSpecHash": "trucHuFJhm5p9nBrgsA5U3u9YJ2aGxnQL5Ja59Pb8v1RlNltDGZNQHO4WZGVgaJqr8ejEPizFta4STvACjfNtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Data.Abstraction\\PlayerCatalog.Data.Abstraction.csproj",
+  "projectFilePath": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Data.Abstraction\\PlayerCatalog.Data.Abstraction.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

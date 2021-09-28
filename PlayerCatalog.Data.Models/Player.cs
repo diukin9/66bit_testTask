@@ -14,21 +14,5 @@ namespace PlayerCatalog.Data.Models
         public Nation Nation { get; set; }
         public string Surname { get; set; }
         public DateTime Birthdate { get; set; }
-
-        public Player()
-        {
-
-        }
-
-        public Player(string name, string surname, Gender gender, 
-            Team team, Nation nation, DateTime birthdate)
-        {
-            this.Name = name;
-            this.Team = team;
-            this.Gender = gender;
-            this.Nation = nation;
-            this.Surname = surname;
-            this.Birthdate = birthdate;
-        }
     }
 }

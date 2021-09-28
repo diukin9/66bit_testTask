@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oX0Hr7f4xyqhlqJ3P908MlLKyuA2KerpyXpT0mHrXyVMcVhvX9DPbZtQo2qDGkrkc4y8e+Xl1jRfn+BlCiRgdA==",
+  "dgSpecHash": "UryFeHWq7K+BCdzt6tjnBnVNfHf/T24WlpfF7BBlzynSp4wk5NTt+MHy1i8DbaNq5wNEHKC7Ngxi67jXhC6YPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Hubs\\PlayerCatalog.Hubs.csproj",
+  "projectFilePath": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Hubs\\PlayerCatalog.Hubs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petrd\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\petrd\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\2.2.0\\microsoft.aspnetcore.connections.abstractions.2.2.0.nupkg.sha512",

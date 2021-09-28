@@ -1268,20 +1268,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\petrd\\.nuget\\packages\\": {}
+    "C:\\Users\\petrd\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Hubs\\PlayerCatalog.Hubs.csproj",
+      "projectUniqueName": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Hubs\\PlayerCatalog.Hubs.csproj",
       "projectName": "PlayerCatalog.Hubs",
-      "projectPath": "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Hubs\\PlayerCatalog.Hubs.csproj",
+      "projectPath": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Hubs\\PlayerCatalog.Hubs.csproj",
       "packagesPath": "C:\\Users\\petrd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Hubs\\obj\\",
+      "outputPath": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Hubs\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\petrd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1294,8 +1302,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Data.Models\\PlayerCatalog.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\petrd\\source\\repos\\66bit_testTask\\PlayerCatalog.Data.Models\\PlayerCatalog.Data.Models.csproj"
+            "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Data.Models\\PlayerCatalog.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\petrd\\Source\\Repos\\66bit_testTask\\PlayerCatalog.Data.Models\\PlayerCatalog.Data.Models.csproj"
             }
           }
         }
@@ -1330,7 +1338,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
