@@ -2,9 +2,20 @@ let baseUrl = window.location.href.toLowerCase();
 let rootRoute = getRootRoute(baseUrl);
 let page = findCurrentPage(baseUrl);
 let ref = document.getElementById("about");
+
 if (page === 'editplayer') {
+    let culture = '';
+    document.cookie.split(';').forEach(x => {
+        if (x.includes('.AspNetCore.Culture')) {
+            culture = x.slice(-2);
+        }
+    });
     let button = document.getElementById('customBtn');
-    button.innerHTML = '<i>─</i>Вернуться назад<i>─</i>';
+    if (culture === 'de')
+        button.innerHTML = '<i>─</i>Rücken an Rücken<i>─</i>';
+    else if (culture === 'en')
+        button.innerHTML = '<i>─</i>Go back<i>─</i>';
+    else button.innerHTML = '<i>─</i>Вернуться назад<i>─</i>';
 }
 let background = document.getElementById("bg");
 background.style.background = findBackground(page);

@@ -335,6 +335,10 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "Localization.AspNetCore.TagHelpers": {
+              "target": "Package",
+              "version": "[0.6.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.6, )"

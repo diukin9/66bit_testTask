@@ -7,6 +7,8 @@ namespace PlayerCatalog.Data.PostgreSQL
     {
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<PlayerLocalization> PlayerLocalizations { get; set; }
+        public DbSet<TeamLocalization> TeamLocalizations { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
