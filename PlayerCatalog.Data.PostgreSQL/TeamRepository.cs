@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PlayerCatalog.Data.Abstraction;
 using PlayerCatalog.Data.Models;
+using PlayerCatalog.Data.Models.Enums;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PlayerCatalog.Data.PostgreSQL
 {
-    public class TeamRepository : ITeamRepository
+    public class TeamRepository : ITeamRepository<Team>
     {
         private readonly DataContext _context;
 
@@ -16,33 +16,36 @@ namespace PlayerCatalog.Data.PostgreSQL
             _context = context;
         }
 
-        public async void Add(Team model)
+        public async void Add(Team model, Language language)
         {
+            var localization = new TeamLocalization()
+            {
+                Language = language,
+                Name = model.Name
+            };
+            model.Localization = new List<TeamLocalization>() { localization };
             await _context.Teams.AddAsync(model);
             _context.SaveChanges();
         }
 
-        public async Task<List<Team>> All() 
-            => await _context.Teams.ToListAsync();
-
-        public async Task<Team> FindById(int id)
+        public async Task<List<Team>> All()
         {
-            return await _context.Teams.Where(x => x.Id == id)
-                .FirstOrDefaultAsync();
+            var teams = await _context.Teams
+                .Include(x => x.Localization)
+                .ToListAsync();
+            return teams;
         }
 
-        public void Update(Team model)
-        {
-            _context.Teams.Update(model);
-            _context.SaveChanges();
-        }
-
-        public async Task<Team> FindOrCreate(string query)
+        public async Task<Team> FindOrCreate(string query, Language language)
         {
             var team = await _context.Teams
-                .Where(x => x.Name.ToLower() == query.ToLower())
-                .FirstOrDefaultAsync();
-            return team ?? new Team(query);
+                .FirstOrDefaultAsync(x => x.Name.ToLower() == query.ToLower());
+            if (team == null)
+            {
+                team = new Team(query);
+                this.Add(team, language);
+            }
+            return team;
         }
     }
 }

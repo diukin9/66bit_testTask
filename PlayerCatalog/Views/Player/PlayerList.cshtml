@@ -1,6 +1,8 @@
-﻿@model List<PlayerCatalog.Data.Models.Player>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<PlayerCatalog.ViewModels.PlayerInfo>
 @{
-    ViewData["Title"] = "Список футболистов";
+    ViewData["Title"] = Localizer["Title"];
 }
 
 <div class="center_block">
@@ -9,13 +11,13 @@
             <table class="table gray-transparent">
                 <tbody id="PlayersTable">
                     <tr class="font-set">
-                        <th>Имя</th>
-                        <th>Фамилия</th>
-                        <th>Пол</th>
-                        <th>Команда</th>
-                        <th>Национальность</th>
-                        <th>Дата рождения</th>
-                        <th>Действие</th>
+                        <th>@Localizer["PlayerName"]</th>
+                        <th>@Localizer["PlayerSurname"]</th>
+                        <th>@Localizer["PlayerGender"]</th>
+                        <th>@Localizer["PlayerTeam"]</th>
+                        <th>@Localizer["PlayerNationality"]</th>
+                        <th>@Localizer["PlayerBirthDate"]</th>
+                        <th>@Localizer["Action"]</th>
                     </tr>
                     @foreach (var player in Model)
                     {
@@ -23,14 +25,14 @@
                             <td>@player.Name</td>
                             <td>@player.Surname</td>
                             <td>
-                                @(player.Gender == 0 ? "Мужской" : "Женский")
+                                @(player.Gender == 0 ? Localizer["MaleGender"] : Localizer["FemaleGender"])
                             </td>
-                            <td>@player.Team.Name</td>
-                            <td>@(player.Nation == 0 ? "Россия" : (int) player.Nation == 1 ? "США" : "Италия")</td>
+                            <td>@player.Team</td>
+                            <td>@(player.Nation == 0 ? Localizer["RussianNationality"] : (int) player.Nation == 1 ? Localizer["AmericanNationality"] : Localizer["ItalianNationality"])</td>
                             <td>@player.Birthdate.ToString("dd.MM.yyyy")</td>
                             <td>
                                 <a asp-controller="Player" asp-action="EditPlayer" asp-route-id="@player.Id" class="showModal">
-                                    Редактировать
+                                    @Localizer["EditBtnText"]
                                 </a>
                             </td>
                         </tr>

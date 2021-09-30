@@ -1,4 +1,9 @@
-﻿@model PlayerCatalog.ViewModels.PlayerViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model PlayerCatalog.ViewModels.PlayerViewModel
+@{ 
+    ViewData["Title"] = Localizer["Title"];
+}
 
 <div class="center_block margin-top-5">
     <div class="col-md-12 nopadding">
@@ -10,21 +15,25 @@
                     <input asp-for="Name" class="form-control" autocomplete="off" required>
                     <input asp-for="Surname" class="form-control" autocomplete="off" required>
                     <select asp-for="Gender" class="form-control" required>
-                        <option value="0" selected>Пол: мужской</option>
-                        <option value="1">Пол: женский</option>
+                        <option value="0" selected>@Localizer["MaleGender"]</option>
+                        <option value="1">@Localizer["FemaleGender"]</option>
                     </select>
                     <input asp-for="Team" class="form-control" list="team" autocomplete="off" required>
                     <datalist id="team">
-                        @foreach (var team in Model.AllTeams) { <option>@team.Name</option> }
+                        @foreach (var team in Model.AllTeams)
+                        {
+                            <option>@team.Name</option>
+
+                        }
                     </datalist>
                     <select asp-for="Nation" class="form-control" required>
-                        <option value="0">Национальность: Россия</option>
-                        <option value="1">Национальность: США</option>
-                        <option value="2">Национальность: Италия</option>
+                        <option value="0">@Localizer["RussianNationality"]</option>
+                        <option value="1">@Localizer["AmericanNationality"]</option>
+                        <option value="2">@Localizer["ItalianNationality"]</option>
                     </select>
                     <input asp-for="Birthdate" type="date" class="form-control"
                            max='@DateTime.Now.ToString("yyyy-MM-dd")' required><br>
-                    <button type="submit" class="btn btn-1 col-md-12 col-xs-12">Сохранить</button>
+                    <button type="submit" class="btn btn-1 col-md-12 col-xs-12">@Localizer["SaveBtnText"]</button>
                 </div>
             </form>
         </div>

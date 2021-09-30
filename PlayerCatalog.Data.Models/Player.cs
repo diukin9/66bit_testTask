@@ -1,5 +1,6 @@
 ﻿using PlayerCatalog.Data.Models.Enums;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace PlayerCatalog.Data.Models
@@ -14,5 +15,6 @@ namespace PlayerCatalog.Data.Models
         public Nation Nation { get; set; }
         public string Surname { get; set; }
         public DateTime Birthdate { get; set; }
+        public List<PlayerLocalization> Localization { get; set; }
     }
 }

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -17,12 +20,15 @@
                 <div class="buttons col-md-12 col-sm-12 col-xs-12 no-margin top">
                     <div class="inner-row">
                         <a class="top-link btn-1f md-trigger" data-modal="about-12" id="about">
-                            <span id="customBtn"><i>&boxh;</i>переключиться<i>&boxh;</i></span>
+                            <span id="customBtn"><i>&boxh;</i>@Localizer["Switch"]<i>&boxh;</i></span>
                         </a>
                     </div>
                 </div>
             </div>
-            @RenderBody()
+        @RenderBody()
+        <div style="text-align:center;">
+            @await Html.PartialAsync("_SelectLanguagePartial")
+        </div>
         </div>
     </div>
 
